@@ -1,16 +1,9 @@
 import joblib
 from flask import Flask, request, jsonify
 import pandas as pd
-import joblib
 
 app = Flask(__name__)
-# Define a filename for the exported model
-filename = 'logistic_regression_model.joblib'
 
-# Save the trained model to the file
-joblib.dump(model, filename)
-
-print(f"Model successfully exported to {filename}")
 # Load trained model and scaler
 try:
     model = joblib.load('logistic_regression_model.joblib')
